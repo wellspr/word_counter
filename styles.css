@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans&family=Prompt&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* https://colorhunt.co/palette/253088 */
+    /* --background-color: #f8dc81; */
+    /* --header-background-color: #214151; */
+    /* --header-h1-color: #eff7e1; */
+    /* --body-font-color: #214151; */
+    /* --body-font-variant: #a2d0c1; */
+    /* --textarea-background-color: #eff7e1; */
+    /* --scrollbar-base-color: #214151; */
+    /* --scrollbar-background-color: #eff7e1;  */
+
+    /* https://colorhunt.co/palette/258022 */
+    /* --background-color: #1e212d;
+    --header-background-color: #1e212d;
+    --footer-background-color: #1e212d;
+    --body-font-variant: #faf3e0;
+    --header-h1-color: #b68973;
+    --body-font-color: #eabf9f;
+    --body-font-variant: #faf3e0;
+    --textarea-background-color: #faf3e0;
+    --textarea-border-color: #b68973;
+    --textarea-color: #1e212d;
+    --scrollbar-base-color: #b68973;
+    --scrollbar-background-color: #eabf9f; */
+
+    /* Palette from photo */
+    --caput-mortuum: #522124ff;
+    --desert-sand: #E9BE9Cff;
+    --rich-black-fogra-29: #011725ff;
+    --caput-mortuum-2: #572F29ff;
+    --copper: #BC7343ff;
+    --deep-champagne: #FFD9ADff;
+    --peach: #FBDFADff;
+
+    --background-color: rgba(1, 23, 37, 0.8);
+    --header-background-color: rgba(1, 23, 37, 0.8);
+    --footer-background-color: rgba(1, 23, 37, 0.8);
+    --header-h1-color: rgba(188, 115, 67, 0.85);
+    --body-font-color: rgba(188, 115, 67, 0.856);
+    --body-font-variant: rgba(233, 189, 156, 0.911);
+    --textarea-background-color: #FBDFAD;
+    --textarea-border-color: #BC7343ff;
+    --textarea-color: #522124ff;
+    --scrollbar-base-color: #BC7343ff;
+    --scrollbar-background-color: #E9BE9Cff;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--body-font-color);
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1521225753516-46438a76f25a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);
+    background-position: center;
+    background-size: auto;
+    z-index: -1;
+    opacity: 0.85;
+    background-color: var(--background-color);
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--header-background-color);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--header-h1-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    height: 75vh;
+    width: 95vw;
+    max-width: 992px;
+    padding: 30px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+div.info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+div.textarea {
+    width: 100%;
+    flex-grow: 1;
+}
+
+p.label {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+span.count {
+    font-weight: normal;
+    color: var(--body-font-variant);
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    outline: none;
+    border: 2px solid;
+    border-color: var(--textarea-border-color);
+    padding: 10px;
+    resize: none;
+    overflow-y: auto;
+    font-size: 1.2rem;
+    font-family: 'Prompt', sans-serif;    
+    color: var(--textarea-color);
+    cursor: auto;
+    scrollbar-width: thin;
+    background-color: var(--textarea-background-color);
+}
+
+textarea::-webkit-scrollbar{
+    width: 5px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-background-color);
+    background-color: var(--scrollbar-background-color);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-base-color);
+}
+
+textarea::-webkit-scrollbar-button {
+    height: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    background-color: var(--footer-background-color);
+}
+
+footer p{
+    font-size: 0.8rem;
+    margin: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--body-font-color);
+}
+
+footer a:hover {
+    color: var(--body-font-variant);
+    transition: 0.5s ease-in-out;
+}
+
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+    header h1{
+        font-size: 2rem;
+    }
+
+    main {
+        /* display: block; */
+    }
+
+    div.info {
+        display: block;
+        width: 100%;
+    }
+
+    p.label {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+
+}
